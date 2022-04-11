@@ -1,0 +1,9 @@
+.manual-button {
+  &.dx-state-disabled {
+    background: transparent !important;
+  }
+
+  .dx-icon {
+    transition-duration: 0.3s;
+  }
+}

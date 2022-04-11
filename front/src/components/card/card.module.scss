@@ -1,0 +1,44 @@
+@import '../../scss/variables.scss';
+
+$header-font-color: lighten($color-font-base, 30%);
+$header-font-size: 30px;
+$header-font-weight: 300;
+
+.card {
+  width: 100%;
+  padding: 15px 15px;
+  background-color: $color-bg-base;
+  border-radius: 3px;
+  box-shadow: 1px 1px 9px -3px rgba(34, 60, 80, 0.2);
+}
+
+.headerContainer {
+  padding: 0 5px 10px;
+}
+
+.content {
+  width: 100%;
+  min-height: 40px;
+}
+
+.header {
+  display: flex;
+}
+
+.headerTitle {
+  margin: 0;
+  color: $color-font-grey;
+  font-weight: $header-font-weight;
+  font-size: $font-size-normal;
+  text-transform: uppercase;
+}
+
+.headerSubtitle {
+  margin: 0;
+  font-size: $header-font-size;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+}

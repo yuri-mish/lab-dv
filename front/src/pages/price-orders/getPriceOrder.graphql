@@ -1,0 +1,29 @@
+query getPriceOrder($ref: String) {
+  priceorder(ref: $ref) {
+    ref
+    number_doc
+    date
+    start_date
+    expiration_date
+    transactions_kind
+    status
+    note
+
+
+    partner {
+      ref
+      name
+    }
+
+    goods {
+      row
+      newprice
+      discount_percent
+      quantity
+      nom {
+        ref
+        name
+      }
+    }
+  }
+}

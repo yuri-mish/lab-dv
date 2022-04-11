@@ -1,0 +1,24 @@
+$font-wight-desc: normal !important;
+
+.desc {
+  min-width: 200px;
+  overflow: hidden;
+  font-weight: $font-wight-desc;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  height: 90%;
+}
+
+.childrenContainer {
+  display: flex;
+  align-items: center;
+}
+
+.menuItem {
+  padding: 5px 2px;
+}

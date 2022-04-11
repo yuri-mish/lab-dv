@@ -1,0 +1,3 @@
+query getODBPartner($edrpou: String) {
+  opendatabot(kod: $edrpou)
+}

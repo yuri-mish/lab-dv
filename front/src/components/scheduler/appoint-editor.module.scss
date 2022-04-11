@@ -1,0 +1,52 @@
+$font-wight-desc: normal !important;
+
+.hblock {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.vblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.field {
+  display: flex;
+  padding: 4px;
+
+  .fieldLabel {
+    align-self: center;
+    min-width: 80px;
+    max-width: 80px;
+  }
+
+  .fieldArea {
+    align-self: center;
+    width: 100%;
+  }
+}
+
+.desc {
+  min-width: 200px;
+  overflow: hidden;
+  font-weight: $font-wight-desc;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  height: 90%;
+}
+
+.childrenContainer {
+  display: flex;
+  align-items: center;
+}
+
+.menuItem {
+  padding: 5px 2px;
+}

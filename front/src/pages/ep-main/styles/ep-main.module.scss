@@ -1,0 +1,146 @@
+$mainSize: 16px;
+
+.ep_main_content_block {
+  position: relative;
+  z-index: 10;
+  margin: 10px;
+  padding: 10px;
+  font-size: $mainSize;
+
+  .dx-button-text {
+    font-size: $mainSize;
+    line-height: 1;
+    text-transform: unset;
+  }
+
+  .dx-button-has-icon.dx-button-has-text .dx-icon {
+    width: $mainSize;
+    height: $mainSize;
+    font-size: $mainSize;
+    line-height: $mainSize;
+    background-size: $mainSize $mainSize;
+  }
+}
+
+.df_space_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.df_space_around {
+  display: flex;
+  justify-content: space-around;
+}
+
+.df_wrap {
+  flex-wrap: wrap;
+}
+
+.df_dir_column {
+  flex-direction: column;
+}
+
+.df {
+  display: flex;
+
+  .left_block,
+  .right_block {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left_block {
+    align-items: flex-end;
+    width: 55%;
+    padding-right: 40px;
+  }
+
+  .right_block {
+    width: 45%;
+
+    .dx-field-label {
+      flex-grow: 1;
+    }
+  }
+
+  @media screen and (max-width: 950px) {
+    .left_block,
+    .right_block {
+      flex-grow: unset;
+      align-items: flex-end;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+  }
+}
+
+.mr_bottom {
+  margin-bottom: 20px;
+}
+
+.mr_b_16 {
+  margin-bottom: 16px;
+}
+
+.mr_wrap > * {
+  margin: 20px;
+}
+
+.row_2x_950 {
+  display: flex;
+  flex-direction: row;
+  margin-right: -10px;
+  margin-left: -10px;
+
+  & > * {
+    width: 50%;
+    padding: 0 10px;
+  }
+
+  @media screen and (max-width: 950px) {
+    flex-direction: column;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.field_wrap {
+  margin-right: 30px;
+  margin-bottom: 15px;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 5px;
+
+  & > *:not(:last-of-type) {
+    margin-bottom: 5px;
+  }
+}
+
+.mr_right {
+  margin-right: 20px;
+}
+
+.col_reverse_950 {
+  @media screen and (max-width: 950px) {
+    flex-direction: column-reverse;
+  }
+}
+
+.max_w_1440 {
+  max-width: 1440px;
+}
+
+.break_spaces {
+  white-space: break-spaces;
+}
+
+.df_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

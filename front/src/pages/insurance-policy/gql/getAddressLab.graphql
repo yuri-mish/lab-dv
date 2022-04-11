@@ -1,0 +1,3 @@
+query ($labNumbers: [Int]) {
+  getLab (labNumbers: $labNumbers)
+}

@@ -1,0 +1,3 @@
+mutation removeMessages($refs: [String]) {
+  removeMessage(ids: $refs)
+}

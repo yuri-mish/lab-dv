@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "key": "$base-accent",
+      "value": "rgba(59, 42, 212, 1)"
+    },
+    {
+      "key": "$datagrid-columnchooser-item-color",
+      "value": "rgba(0, 0, 0, 0.86)"
+    },
+    {
+      "key": "$menu-color",
+      "value": "rgba(43, 43, 43, 1)"
+    },
+    {
+      "key": "$datagrid-menu-icon-color",
+      "value": "rgba(43, 43, 43, 1)"
+    }
+  ],
+  "baseTheme": "material.orange.light.compact",
+  "assetsBasePath": "../../../node_modules/devextreme/dist/css/",
+  "outputColorScheme": "base",
+  "base": true,
+  "makeSwatch": false,
+  "version": "21.2.4",
+  "widgets": [],
+  "removeExternalResources": false
+}

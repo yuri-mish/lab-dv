@@ -1,0 +1,12 @@
+@import '../../../scss/variables.scss';
+
+$base-gray: #e0e0e0;
+
+.container {
+  min-height: calc(100vh - 114px);
+  padding: 20px 2%;
+}
+
+.border_b {
+  border-bottom: 1px solid $base-gray;
+}

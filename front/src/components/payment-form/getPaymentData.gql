@@ -1,0 +1,3 @@
+query getPaymentData($type: String, $organization: String, $options: JSONObject) {
+  paymentData: getPaymentData(paymentType: $type, organization: $organization, options: $options)
+}

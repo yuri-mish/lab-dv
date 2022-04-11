@@ -1,0 +1,25 @@
+query dsGetPartners($ref: String, $limit: Int, $jfilt: [JSON], $offset: Int) {
+  totalcount: partners(
+    ref: $ref, jfilt: $jfilt, totalCount: 1
+  ) {
+    totalcount
+  }
+
+  list: partners(ref: $ref, limit: $limit, jfilt: $jfilt, offset: $offset) {
+    ref 
+    name 
+    edrpou 
+    id 
+    parent 
+    is_buyer 
+    is_supplier
+    legal_address 
+    note 
+    name_full 
+    individual_legal 
+    inn 
+    isCorporate
+    phones
+  }
+}
+

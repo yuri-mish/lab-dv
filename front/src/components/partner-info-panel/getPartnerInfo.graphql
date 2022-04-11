@@ -1,0 +1,3 @@
+query getPartnerInfo($ref: String) {
+  infoapi(doc: "contract", ref: $ref) 
+}

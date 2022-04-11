@@ -1,0 +1,44 @@
+@import '../../scss/variables.scss';
+
+.docInfo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 1px solid red;
+}
+
+.editFormButton {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.priceItem {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+}
+
+.price {
+  padding-bottom: 7px;
+  font-size: $font-size-normal;
+}
+
+.fileUploader {
+  display: flex;
+  justify-content: center;
+}
+
+.fileLink {
+  display: flex;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.dataGridItem {
+  width: 100%;
+  max-width: min-content;
+}

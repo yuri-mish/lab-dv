@@ -1,0 +1,14 @@
+query ($ref: String) {
+  buyers_orders(ref: $ref) {
+    number_doc
+    ref
+    ClientPerson
+    ClientPersonPhone
+    partner{ref name }
+    services{
+      vin_code  
+      gos_code 
+      nom{ref name}
+    }
+  }
+}

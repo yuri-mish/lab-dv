@@ -1,0 +1,61 @@
+@import '../../scss/variables.scss';
+
+$header-font-size: 30px;
+$header-font-weight: 300;
+
+.description {
+  margin: 0;
+  color: $color-font-grey;
+  font-weight: $header-font-weight;
+  font-size: $font-size-normal;
+  text-transform: uppercase;
+  overflow-wrap: break-word;
+}
+
+.amount {
+  margin: 0;
+  padding-top: 4px;
+  padding-bottom: 19px;
+  font-size: $header-font-size;
+}
+
+.list {
+  width: 300px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.listItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  div {
+    &:last-child {
+      position: absolute;
+      right: 0;
+    }
+  }
+}
+
+.infoIcon {
+  color: $color-font-grey;
+
+  &:hover {
+    color: $color-font-base;
+  }
+}
+
+.payContainer {
+  width: 400px;
+}
+
+.liqpayWidget {
+  width: 400px;
+  min-height: 400px;
+}

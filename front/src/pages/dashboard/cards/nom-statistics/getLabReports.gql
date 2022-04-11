@@ -1,0 +1,7 @@
+query getLabReports($jfilt: [JSON]) {
+  list: lab_report(jfilt: $jfilt) {
+    service {
+      name
+    }
+  }
+}

@@ -1,0 +1,3 @@
+query checkContract($partner: String!, $date: String!, $gos_code:String) {
+  checkContract: checkContract(partner: $partner, date:$date, gos_code:$gos_code)
+}

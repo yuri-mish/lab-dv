@@ -1,0 +1,11 @@
+query dsGetNoms($ref: String, $limit: Int, $offset: Int, $jfilt: [JSON]) {
+  totalcount: noms(ref: $ref, totalCount: 1) {
+    totalcount
+  }
+  list: noms(ref: $ref, limit: $limit, offset: $offset, jfilt: $jfilt) {
+    ref 
+    name 
+    name_full 
+    vat_rate
+  }
+}

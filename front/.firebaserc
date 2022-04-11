@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "production": "otk-lab",
+    "master": "otk-lab-dev",
+    "default": "otk-lab-dev"
+  }
+}

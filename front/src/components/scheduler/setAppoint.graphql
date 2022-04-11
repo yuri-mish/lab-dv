@@ -1,0 +1,3 @@
+mutation setAppoint($input: JSONObject) {
+  setAppoint(input: $input) 
+}

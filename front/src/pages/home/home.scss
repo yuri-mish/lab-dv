@@ -1,0 +1,43 @@
+.logos-container {
+  margin: 20px 0 40px 0;
+  text-align: center;
+
+  svg {
+    display: inline-block;
+  }
+}
+
+.vSplit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+}
+
+.devextreme-logo {
+  width: 200px;
+  height: 34px;
+  margin-bottom: 19px;
+}
+
+.react-logo {
+  width: 184px;
+  height: 68px;
+}
+
+.plus {
+  width: 22px;
+  height: 22px;
+  margin: 23px 10px;
+}
+
+.screen-x-small .logos-container {
+  svg {
+    display: block;
+    width: 100%;
+
+    &.plus {
+      margin: 0;
+    }
+  }
+}

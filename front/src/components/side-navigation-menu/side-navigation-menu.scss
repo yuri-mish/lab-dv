@@ -1,0 +1,102 @@
+/* stylelint-disable */
+@import "../../dx-styles.scss";
+@import "../../themes/generated/variables.additional.scss";
+
+.side-navigation-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px !important;
+  height: 100%;
+  min-height: 100%;
+
+  .menu-footer {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .menu-container {
+    //min-height: 100%;
+
+    .dx-treeview {
+      // ## Long text positioning
+      white-space: nowrap;
+      // ##
+
+      // ## Icon width customization
+      .dx-treeview-item {
+        padding-right: 0;
+        padding-left: 0;
+
+        .dx-icon {
+          width: $side-panel-min-width !important;
+          margin: 0 !important;
+        }
+      }
+      // ##
+
+      // ## Arrow customization
+      .dx-treeview-node {
+        padding: 0 0 !important;
+        color: #fff;
+      }
+
+      .dx-treeview-toggle-item-visibility {
+        right: 10px;
+        left: auto;
+      }
+
+      .dx-rtl .dx-treeview-toggle-item-visibility {
+        right: auto;
+        left: 10px;
+      }
+      // ##
+
+      // ## Item levels customization
+      .dx-treeview-node {
+        &[aria-level='1'] {
+          font-weight: bold;
+          border-bottom: 1px solid $base-border-color;
+        }
+
+        &[aria-level='2'] .dx-treeview-item-content {
+          padding: 0 $side-panel-min-width;
+          font-weight: normal;
+        }
+      }
+      // ##
+    }
+
+    // ## Selected & Focuced items customization
+    .dx-treeview {
+      .dx-treeview-node-container {
+        .dx-treeview-node {
+          &.dx-state-selected:not(.dx-state-focused) > .dx-treeview-item {
+            background: transparent;
+          }
+
+          &.dx-state-selected > .dx-treeview-item * {
+            color: $base-accent;
+          }
+
+          &:not(.dx-state-focused) > .dx-treeview-item.dx-state-hover {
+            background-color: lighten($base-bg, 4);
+          }
+        }
+      }
+    }
+
+    .dx-theme-generic .dx-treeview {
+      .dx-treeview-node-container .dx-treeview-node.dx-state-selected.dx-state-focused > .dx-treeview-item * {
+        color: inherit;
+      }
+    }
+    // ##
+  }
+}
+
+.dx-drawer-overlap.pre-init-blink-fix {
+  @import "../../utils/patches.scss";
+
+  @include menu-pre-init-patch;
+}

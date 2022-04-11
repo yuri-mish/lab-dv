@@ -1,0 +1,11 @@
+.textbox-right-align {
+  input {
+    text-align: right;
+  }
+}
+
+.hide-upload-button {
+  .dx-fileuploader-upload-button {
+    display: none;
+  }
+}

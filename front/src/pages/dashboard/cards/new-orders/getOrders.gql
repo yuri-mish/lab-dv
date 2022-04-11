@@ -1,0 +1,11 @@
+query getOrders($limit: Int, $jfilt: [JSON]) {
+  list: buyers_orders(limit: $limit, jfilt: $jfilt) {
+    ref
+    date
+    services {
+      nom {
+        name
+      }
+    }
+  }
+}

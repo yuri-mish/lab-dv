@@ -1,0 +1,20 @@
+@import "../../themes/generated/variables.base.scss";
+@import "../../themes/generated/variables.additional.scss";
+
+$font-size-footer: 11px;
+$font-size-footer-compact: 14px;
+$color-font-footer: rgba($base-text-color, alpha($base-text-color) * 0.7);
+
+.footer {
+  display: block;
+  margin-bottom: 30px;
+  padding-top: 15px;
+  color: $color-font-footer;
+  font-size: $font-size-footer;
+  white-space: pre-wrap;
+  background-color: $base-bg;
+
+  &--compact {
+    font-size: $font-size-footer-compact;
+  }
+}

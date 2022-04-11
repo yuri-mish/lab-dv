@@ -1,0 +1,15 @@
+query dsGetServisesNoms($ref: String, $limit: Int, $offset: Int, $jfilt: [JSON]) {
+  totalcount: noms(ref: $ref, totalCount: 1, jfilt: $jfilt,
+    options: {selectServices: true}
+  ) {
+    totalcount
+  }
+  list: noms(ref: $ref, limit: $limit, offset: $offset, jfilt: $jfilt,
+    options: {selectServices: true}
+  ) {
+    ref 
+    name 
+    name_full 
+    vat_rate
+  }
+}

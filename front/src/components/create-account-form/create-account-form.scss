@@ -1,0 +1,25 @@
+@import "../../themes/generated/variables.base.scss";
+@import "../../scss/variables.scss";
+
+$color-policy-info: rgba($base-text-color, alpha($base-text-color) * 0.7);
+$color-policy-link: rgba($base-text-color, alpha($base-text-color) * 0.7);
+$font-size-policy-info: 14px;
+
+.create-account-form {
+  .policy-info {
+    margin: 10px 0;
+    color: $color-policy-info;
+    font-size: $font-size-policy-info;
+    font-style: normal;
+
+    a {
+      color: $color-policy-link;
+    }
+  }
+
+  .login-link {
+    color: $base-accent;
+    font-size: $font-size-normal;
+    text-align: center;
+  }
+}

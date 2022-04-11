@@ -1,0 +1,75 @@
+$badge-font-size: 0.7rem;
+$badge-font-weight: lighter;
+$font-hidden: 0;
+
+.badge {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 14px;
+  height: 13px;
+  padding: 0 4px;
+  font-weight: $badge-font-weight;
+  font-size: $badge-font-size;
+  line-height: 1;
+  border-radius: 7px;
+  transform: scale(1);
+  transition: transform 225ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+  &.wide {
+    width: 20px;
+  }
+
+  &.invisible {
+    transform: scale(0);
+  }
+
+  &.dot {
+    width: 8px;
+    min-width: 0;
+    height: 8px;
+    padding: 0 0;
+    font-size: $font-hidden;
+    border: 1px solid;
+    border-radius: 50%;
+  }
+}
+
+.badgeContainer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  width: fit-content;
+  height: fit-content;
+  transform: translate(50%, -50%);
+  pointer-events: none;
+
+  &.left {
+    right: unset;
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &.bottom {
+    top: unset;
+    bottom: 0;
+    transform: translate(50%, 50%);
+  }
+
+  &.bottomLeft {
+    top: unset;
+    right: unset;
+    bottom: 0;
+    left: 0;
+    transform: translate(-50%, 50%);
+  }
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: min-content;
+  height: min-content;
+}

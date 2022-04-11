@@ -1,0 +1,8 @@
+query getPayKinds {
+  list: getPayKindes {
+    ref
+    id
+    pay_form
+    name
+  }
+}

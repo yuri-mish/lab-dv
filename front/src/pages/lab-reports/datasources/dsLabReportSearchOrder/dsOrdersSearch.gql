@@ -1,0 +1,24 @@
+query dsLabReportGetOrders($ref: String, $limit: Int, $jfilt: [JSON], 
+  $offset: Int, 
+  $sort: sort,
+  $requireTotalCount: Boolean!
+) {
+  totalcount: buyers_orders(
+    ref: $ref, jfilt: $jfilt, totalCount: 1
+  ) @include(if: $requireTotalCount) {
+    totalcount
+  }
+
+  list: buyers_orders(ref: $ref, limit: $limit, jfilt: $jfilt, offset: $offset, 
+    sort: $sort
+  ) {
+    ref
+    number_doc
+    date
+    partner {
+      ref
+      id
+      name
+    }
+  }
+}

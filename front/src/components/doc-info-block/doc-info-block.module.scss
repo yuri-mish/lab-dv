@@ -1,0 +1,24 @@
+@import '../../scss/variables.scss';
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 10px;
+  font-size: $font-size-normal;
+  border: 1px solid $color-border-dark;
+  border-radius: 2px;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-bottom: 10px;
+  padding: inherit;
+
+  &.small {
+    position: relative;
+    padding: 0;
+  }
+}

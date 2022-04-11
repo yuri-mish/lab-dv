@@ -1,0 +1,86 @@
+{
+  "name": "otk-laboratory",
+  "version": "0.49.0",
+  "private": true,
+  "dependencies": {
+    "@apollo/client": "^3.5.6",
+    "@pdf-lib/fontkit": "^1.1.1",
+    "dayjs": "^1.10.4",
+    "devextreme": "^21.2.4",
+    "devextreme-react": "^21.2.4",
+    "exceljs": "^4.2.1",
+    "file-saver": "^2.0.5",
+    "graphql.macro": "^1.4.2",
+    "marked": "^3.0.7",
+    "papaparse": "^5.3.1",
+    "pdf-lib": "^1.16.0",
+    "prop-types": "^15.7.2",
+    "react": "^17.0.2",
+    "react-app-polyfill": "^1.0.6",
+    "react-dom": "^17.0.2",
+    "react-pdf": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "react-toastify": "^8.0.3",
+    "sass": "^1.37.5",
+    "subscriptions-transport-ws": "^0.11.0",
+    "uuidv4": "^6.2.6"
+  },
+  "scripts": {
+    "start": "env-cmd -f ./environments/.env.default react-scripts start",
+    "build": "env-cmd -f ./environments/.env.production react-scripts build",
+    "build-test": "env-cmd -f ./environments/.env.default react-scripts build",
+    "build:ci": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "build-themes": "devextreme build",
+    "lint": "eslint --ext js,jsx --ignore-path .gitignore . --cache --cache-location node_modules/.cache/eslint/ --cache-strategy content",
+    "lint:fix": "npm run lint -- --fix",
+    "stylelint": "npx stylelint \"**/*.scss\" --cache --cache-location node_modules/.cache/stylelint/ --custom-formatter configs/stylelint-html-reporter.js",
+    "stylelint:fix": "npm run stylelint -- --fix",
+    "postinstall": "npm run build-themes",
+    "run:lint": "npm run lint -- -f node_modules/eslint-html-reporter/reporter.js -o report.html",
+    "deploy:live": "firebase deploy --only hosting --project ${FIREBASE_PROJECT_ALIAS:?err}",
+    "deploy:preview": "firebase hosting:channel:deploy --project ${FIREBASE_PROJECT_ALIAS:?err} ${FIREBASE_PREVIEW_BRANCH:?err}",
+    "check:licenses": "license-checker --json > licenses.json",
+    "audit:dependencies": "npm audit --package-lock-only --audit-level critical --json | npm-audit-html --output audit.html",
+    "analyze:bundle": "webpack-bundle-analyzer build/bundle-stats.json --mode=static"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">1%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@nodeart/eslint-plugin": "^1.3.0",
+    "@nodeart/stylelint-config-nodeart": "0.0.4",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "apollo": "^2.33.9",
+    "devextreme-cli": "1.2.22",
+    "devextreme-themebuilder": "^21.2.4",
+    "env-cmd": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-html-reporter": "^0.7.4",
+    "firebase-tools": "^9.8.0",
+    "license-checker": "^25.0.1",
+    "npm-audit-html": "^1.5.0",
+    "stylelint": "^13.13.1",
+    "stylelint-html-reporter": "^0.0.6",
+    "webpack-bundle-analyzer": "^4.4.2"
+  }
+}

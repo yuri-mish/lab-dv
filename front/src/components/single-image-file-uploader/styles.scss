@@ -1,0 +1,38 @@
+
+.single-file-uploader {
+  min-width: 180px;
+  height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .dx-fileuploader-content {
+    display: flex;
+  }
+
+  .dx-fileuploader-button {
+    display: none;
+  }
+
+  .dx-fileuploader-file-container {
+    position: absolute;
+    top: -9px;
+    left: 55px;
+    width: calc(100% - 55px);
+    min-width: 160px;
+  }
+
+  .dx-fileuploader-file {
+    display: block;
+  }
+
+  .dx-fileuploader-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.hide-fileuploader-input {
+  .dx-fileuploader-input {
+    display: none;
+  }
+}

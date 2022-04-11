@@ -1,0 +1,55 @@
+query getLabReport($ref: String) {
+  lab_report(ref: $ref) {
+    _id 
+    ref
+    caption
+    amount
+    posted
+    status
+    gnumber
+    number_doc
+    date
+    dangerous
+    has_error
+    error
+    next_date
+    validated
+    vehicle_map
+    blank_number
+    blank_series
+    spot_cashless
+    source_report {
+      ref
+      caption
+    }
+    rp
+    rv
+    note
+    totalcount
+    partner {
+      ref
+      name
+    }
+    invoice {
+      ref
+      caption
+      date
+      services {
+        nom {
+          ref
+          name
+          name_full
+        }
+      }
+    }
+    vehicle_model {
+      name
+    }
+    service {
+      ref
+      name
+    }
+  }
+
+  branch
+}

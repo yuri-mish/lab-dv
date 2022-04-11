@@ -1,0 +1,20 @@
+query dsLabReportGetOrderByKey($ref: String ) {
+  list: buyers_orders(ref: $ref) {
+    ref
+    caption
+    date
+    partner {
+      ref 
+      id
+      name
+    }
+    services {
+      price
+      nom {
+        ref
+        name
+        name_full 
+      }
+    }
+  }
+}

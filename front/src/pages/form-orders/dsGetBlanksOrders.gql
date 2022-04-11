@@ -1,0 +1,25 @@
+query dsGetBlanksOrders($ref: String, $limit: Int, $jfilt: [JSON], $offset: Int, 
+  $sort: sort,
+  $requireTotalCount: Boolean!
+) {
+  totalcount: blanks(
+    ref: $ref, jfilt: $jfilt, totalCount: 1
+  ) @include(if: $requireTotalCount) {
+    totalcount
+  }
+
+  list: blanks(ref: $ref, limit: $limit, jfilt: $jfilt, offset: $offset, 
+    sort: $sort
+  ) {
+    ref 
+    number_doc 
+    date 
+    partner {
+      ref 
+      name
+    } 
+    note 
+    doc_amount 
+    trust_doc
+  }
+}

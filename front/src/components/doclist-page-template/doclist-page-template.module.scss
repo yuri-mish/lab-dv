@@ -1,0 +1,10 @@
+$header-font-size: 13px;
+
+.menu {
+  display: flex;
+}
+
+.headerBarContainer {
+  padding: 0 15px;
+  font-size: $header-font-size;
+}

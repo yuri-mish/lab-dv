@@ -1,0 +1,27 @@
+query getBlanksOrder($ref: String) {
+  blanks(ref: $ref) {
+    _id
+    ref
+    number_doc
+    date
+    doc_amount
+    note
+    trust_doc
+
+    partner {
+      ref
+      name
+    }
+
+    pos_blank {
+      nomType
+      quantity
+      amount
+      price
+      in_doc_number
+      in_doc_date
+      file_lab
+      file_1c
+    }
+  }
+}

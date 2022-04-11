@@ -1,0 +1,27 @@
+@import "../../themes/generated/variables.base.scss";
+@import "../../scss/variables.scss";
+
+$color-font-login-form: rgba($base-text-color, alpha($base-text-color) * 0.7);
+
+.login-form {
+  .link {
+    font-size: $font-size-normal;
+    font-style: normal;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .form-text {
+    margin: 10px 0;
+    color: $color-font-login-form;
+  }
+}
+
+.serverDownMsg {
+  color: $color-status-error;
+  font-size: $font-size-normal;
+  text-align: center;
+}

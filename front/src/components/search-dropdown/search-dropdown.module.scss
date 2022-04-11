@@ -1,0 +1,19 @@
+@import '../../scss/variables.scss';
+
+.popupTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px 7px;
+}
+
+.popupContent {
+  height: 100%;
+}
+
+.mainTextboxInactive {
+  :global(.dx-texteditor-input) {
+    cursor: pointer;
+    caret-color: $color-transparent;
+  }
+}

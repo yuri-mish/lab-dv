@@ -1,0 +1,5 @@
+mutation updateBuyersOrder($input: JSONObject) {
+  setBuyersOrder(input: $input) {
+    _id
+  }
+}

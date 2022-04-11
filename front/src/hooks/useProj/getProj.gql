@@ -1,0 +1,7 @@
+query getProj {
+  getProj {
+    ref
+    name
+    predefined_name
+  }
+}

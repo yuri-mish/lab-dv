@@ -1,0 +1,110 @@
+.single-file-uploader {
+  min-width: 180px;
+  height: 30px;
+  padding-top: 0;
+  padding-bottom: 0;
+
+  .dx-fileuploader-content {
+    display: flex;
+  }
+
+  .dx-fileuploader-button {
+    display: none;
+  }
+
+  .dx-fileuploader-file-container {
+    position: absolute;
+    top: -9px;
+    left: 55px;
+    width: calc(100% - 55px);
+    min-width: 160px;
+  }
+
+  .dx-fileuploader-file {
+    display: block;
+  }
+
+  .dx-fileuploader-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.hide-fileuploader-input {
+  .dx-fileuploader-input {
+    display: none;
+  }
+}
+
+.single-file-uploader-link {
+  position: absolute;
+  top: 5px;
+  left: 75px;
+  width: calc(100% - 75px);
+  min-width: 140px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.single-file-uploader-nofile-text {
+  position: absolute;
+  top: 5px;
+  left: 55px;
+  width: calc(100% - 55px);
+  min-width: 160px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.single-file-uploader-folder-button {
+  $bg-color-upload-btn: rgb(235, 235, 235);
+  $bg-color-upload-btn-hover: rgb(177, 177, 177);
+  $icon-size: 19px;
+
+  position: absolute;
+  top: 1px;
+  left: 10px;
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+  min-height: 28px;
+  background-color: $bg-color-upload-btn;
+
+  &:hover {
+    background-color: $bg-color-upload-btn-hover;
+  }
+
+  .dx-icon {
+    font-size: $icon-size;
+  }
+
+  .dx-button-content {
+    padding: 0;
+  }
+}
+
+.single-file-uploader-remove-button {
+  $icon-size: 18px;
+  $color-close-btn: transparent;
+  $color-close-btn-hover: rgba(253, 0, 0, 0.705);
+
+  position: absolute;
+  top: 5px;
+  left: 50px;
+  width: 18px;
+  height: 18px;
+  font-size: $icon-size;
+  background-color: $color-close-btn;
+
+  &:hover {
+    color: $color-close-btn-hover;
+    cursor: pointer;
+  }
+
+  &[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
+}

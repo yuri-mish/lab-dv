@@ -1,0 +1,26 @@
+query dsGetPriceOrders($ref: String, $limit: Int, $jfilt: [JSON], $offset: Int, 
+  $sort: sort,
+  $requireTotalCount: Boolean!
+) {
+  totalcount: priceorder(
+    ref: $ref, jfilt: $jfilt, totalCount: 1
+  ) @include(if: $requireTotalCount) {
+    totalcount
+  }
+
+  list: priceorder(ref: $ref, limit: $limit, jfilt: $jfilt, offset: $offset, 
+    sort: $sort
+  ) {
+    ref 
+    number_doc 
+    date 
+    partner {
+      ref 
+      name
+    } 
+    note 
+    quantity 
+    status 
+    transactions_kind
+  }
+}

@@ -1,0 +1,8 @@
+query getPrices($date: String, $priceType: String, $useAddPrice: Boolean) {
+  prices(date: $date, priceType: $priceType, useAddPrice: $useAddPrice) { 
+    nom 
+    price 
+    currency 
+    vat_included 
+  }
+}

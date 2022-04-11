@@ -1,0 +1,7 @@
+query ($options: JSON) {
+  noms(options: $options) {
+    name
+    name_full
+    ref
+  }
+}

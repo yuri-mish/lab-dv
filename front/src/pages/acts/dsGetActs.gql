@@ -1,0 +1,31 @@
+query dsGetBlanksOrders($ref: String, $limit: Int, $jfilt: [JSON], $offset: Int, 
+  $sort: sort,
+  $requireTotalCount: Boolean!
+) {
+  totalcount: servise_selling(
+    ref: $ref, jfilt: $jfilt, totalCount: 1
+  ) @include(if: $requireTotalCount) {
+    totalcount
+  }
+
+  list: servise_selling(ref: $ref, limit: $limit, jfilt: $jfilt, 
+    offset: $offset, 
+    sort: $sort
+  ) {
+    ref 
+    date 
+    number_doc  
+    partner {
+      ref 
+      name
+    } 
+    doc_amount 
+    trans {
+      ref 
+      number_doc 
+      caption 
+      date
+    }
+    note
+  }
+}

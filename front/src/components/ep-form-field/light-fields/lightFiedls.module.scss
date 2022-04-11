@@ -1,0 +1,25 @@
+.field__wrapper-two-col {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.two_input_group {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.border_orange {
+  border: 1px solid rgb(230, 150, 0) !important;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1px rgba(230, 150, 0, 0.7) !important;
+}
+
+.border_red {
+  border: 1px solid rgb(230, 0, 0) !important;
+  border-radius: 2px;
+  box-shadow: 0 0 2px 1px rgba(230, 0, 0, 0.7) !important;
+}

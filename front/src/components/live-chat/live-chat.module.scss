@@ -1,0 +1,25 @@
+.resetButton {
+  $transparency: 0.78;
+  $border: 2px solid;
+  $border-color: rgba(0, 0, 0, $transparency);
+  $bg-color: rgba(255, 255, 255, $transparency);
+  $bg-color-hover: white;
+  $border-color-hover: black;
+
+  position: absolute;
+  top: -30px;
+  left: 15px;
+  height: 30px;
+  background-color: $bg-color;
+  border-top: $border $border-color;
+  border-right: $border $border-color;
+  border-bottom: none;
+  border-left: $border $border-color;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $bg-color-hover;
+    border-color: $border-color-hover;
+  }
+}

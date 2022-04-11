@@ -1,0 +1,64 @@
+@import '../../scss/variables.scss';
+$label-font-size: 10px;
+
+.partnerContainer {
+  display: flex;
+}
+
+.partnerInfoButton {
+  align-self: center;
+  margin-left: 10px;
+}
+
+.cellNewOrder {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    padding: 0 2px;
+    color: $color-font-white;
+    font-size: $label-font-size;
+    line-height: 10px;
+    background-color: $color-status-error;
+    border-radius: 3px;
+    content: 'новий';
+  }
+}
+
+.orderInfoItem {
+  padding: 10px !important;
+  border: 1px solid $color-border-dark;
+  border-radius: 2px;
+}
+
+.orderInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: $font-size-normal;
+}
+
+.orderNumber {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+
+  div {
+    white-space: nowrap;
+
+    &:first-child {
+      padding-top: 5px;
+    }
+  }
+}
+
+.addPriceItem {
+  margin-top: 10px;
+}
+
+.docInfoGroup {
+  width: 260px;
+  margin-left: auto;
+}

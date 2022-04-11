@@ -1,0 +1,50 @@
+$font-size: 14px;
+$no-data-color: #f57a7a;
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.button {
+  border-radius: 2px !important;
+}
+
+.no_data {
+  position: absolute;
+  top: 0;
+  left: 1px;
+  color: $no-data-color;
+  font-size: $font-size;
+  line-height: 1;
+}
+
+@keyframes rotating {
+  from {
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -ms-transform: rotate(-360deg);
+    -moz-transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+    -o-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
+
+.rotating i {
+  -webkit-animation: rotating 1s linear infinite;
+  -moz-animation: rotating 1s linear infinite;
+  -ms-animation: rotating 1s linear infinite;
+  -o-animation: rotating 1s linear infinite;
+  animation: rotating 1s linear infinite;
+}

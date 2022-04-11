@@ -1,0 +1,30 @@
+query dsGetLabReports($ref: String, $limit: Int, $jfilt: [JSON], $offset: Int, 
+  $sort: sort,
+  $requireTotalCount: Boolean!
+) {
+  totalcount: lab_report(
+    ref: $ref, jfilt: $jfilt, totalCount: 1
+  ) @include(if: $requireTotalCount) {
+    totalcount
+  }
+
+  list: lab_report(ref: $ref, limit: $limit, jfilt: $jfilt, offset: $offset, 
+    sort: $sort
+  ) {
+    ref
+    amount
+    status
+    number_doc
+    date
+    has_error
+    vehicle_map
+    note
+    partner {
+      id
+      name
+    }
+    service {
+      name
+    }
+  }
+}

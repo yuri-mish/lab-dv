@@ -1,0 +1,40 @@
+// Manual
+$header-font-size: 2.5rem;
+$header-font-weight: 400;
+$manual-link-font-size: 1.2rem;
+$menu-item-width: 200px;
+
+.menu {
+  li {
+    width: $menu-item-width !important;
+  }
+}
+
+.name {
+  text-align: center;
+}
+
+.page {
+  h1 {
+    font-weight: $header-font-weight;
+    font-size: $header-font-size;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+// ManualsMOC
+.mocItem {
+  list-style-type: none;
+}
+
+.manualLink {
+  font-size: $manual-link-font-size;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

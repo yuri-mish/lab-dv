@@ -1,0 +1,13 @@
+query dsSheduls($ref: String, $limit: Int, $jfilt: [JSON], $offset: Int) {
+  # totalcount: sched(
+  #   ref: $ref, jfilt: $jfilt, totalCount: 1
+  # ) {
+  #   totalcount
+  # }
+
+  list: sched(ref: $ref,  limit: $limit, jfilt: $jfilt, offset: $offset) {
+    _id, startDate, endDate, duration, note, partner {ref, name, phones}, buyers_order {ref, caption},source
+    
+  }
+}
+

@@ -1,0 +1,5 @@
+mutation updateLabReport($input: JSONObject) {
+  setLabReport(input: $input) {
+    _id
+  }
+}

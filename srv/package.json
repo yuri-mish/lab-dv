@@ -1,0 +1,60 @@
+{
+  "name": "otk",
+  "version": "1.0.1",
+  "description": "",
+  "main": "server.js",
+  "bin": {
+    "server": "server.js",
+    "couchSync": "serverCouch.js"
+  },
+  "scripts": {
+    "start:graphql": "node server.js",
+    "start:couch": "node serverCouch.js",
+    "start:site": "node serverSite.js",
+    "lint": "eslint --cache --cache-location node_modules/.cache/eslint/ --cache-strategy content .",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "npm run -s lint",
+    "dev": "../node_modules/.bin/nodemon",
+    "check:licenses": "license-checker --json > licenses.json",
+    "audit:dependencies": "npm audit --package-lock-only --audit-level critical --json | npm-audit-html --output audit.html",
+    "run:lint": "npm run lint -- -f node_modules/eslint-html-reporter/reporter.js -o report.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^5.8.1",
+    "cors": "^2.8.5",
+    "dayjs": "^1.10.6",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "express-prom-bundle": "^6.3.6",
+    "google-auth-library": "^7.11.0",
+    "graphql": "^14.7.0",
+    "graphql-subscriptions": "^1.1.0",
+    "graphql-type-json": "^0.3.2",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.20",
+    "mjml": "^4.9.3",
+    "nano": "^9.0.3",
+    "node-fetch": "^2.6.1",
+    "node-telegram-bot-api": "^0.53.0",
+    "nodemailer": "^6.6.2",
+    "pg": "^8.5.1",
+    "prom-client": "^13.2.0",
+    "qrcode": "^1.5.0",
+    "safejson": "^1.0.1",
+    "ssh2-sftp-client": "^7.2.2",
+    "subscriptions-transport-ws": "^0.9.18",
+    "uuidv4": "^6.2.12",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-html-reporter": "^0.7.4",
+    "license-checker": "^25.0.1",
+    "nodemon": "^2.0.7",
+    "npm-audit-html": "^1.5.0"
+  }
+}

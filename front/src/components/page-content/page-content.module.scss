@@ -1,0 +1,14 @@
+@import '../../scss/variables.scss';
+
+.content {
+  width: 100%;
+  max-width: $content-default-width;
+
+  &.large {
+    max-width: $content-large-width;
+  }
+
+  &.max {
+    max-width: 100%;
+  }
+}

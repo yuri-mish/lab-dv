@@ -1,0 +1,61 @@
+@import '../../scss/variables.scss';
+
+.docContainer {
+  display: flex;
+  flex: 1 0 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  &NoErrors {
+    display: block;
+    max-width: $form-max-width;
+  }
+}
+
+.form {
+  width: 100%;
+  max-width: $form-max-width;
+}
+
+.errorsWrapper {
+  margin: 0 auto;
+}
+
+.errorsContainer {
+  height: fit-content;
+  margin: 0 30px;
+  margin-top: 20px;
+  padding: 15px 20px;
+  border: 1px solid;
+  border-radius: 3px;
+}
+
+.errorMsgs {
+  $font-size-msgs: 14px;
+  $font-size-msgs-empty: 18px;
+
+  max-width: 300px;
+  font-size: $font-size-msgs;
+  white-space: pre;
+  white-space: pre-line;
+  text-align: left;
+
+  &NoDesc {
+    font-size: $font-size-msgs-empty;
+    text-align: center;
+  }
+}
+
+.errorsIcon {
+  $icon-size: 28px;
+
+  margin-bottom: 10px;
+  color: $color-status-error;
+  font-size: $icon-size;
+  text-align: center;
+}
+
+.diiaStatus {
+  display: flex;
+  align-items: center;
+}

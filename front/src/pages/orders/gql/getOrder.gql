@@ -1,0 +1,67 @@
+query getOrder($ref: String) {
+  order: buyers_orders(ref: $ref) {
+    _id
+    ref
+    doc_amount
+    paid 
+    shipped
+    protected
+    vat_included
+    number_doc
+    date
+    useAddPrice
+    proj
+    pay_kind
+    fine_time
+    partner{
+      ref 
+      name 
+      isCorporate
+    }
+    partner_subcontract{
+      ref 
+      name 
+      isCorporate
+    }
+    contract {
+      id 
+      cont {
+        partner
+        price_type
+        contract
+      }
+    }
+    isSubContract
+    price_type
+    organization {
+      ref 
+      name
+    }
+    ClientPerson
+    ClientPersonPhone
+    responsible {
+      ref 
+      name
+    }
+    note
+    services {
+      nom {
+        _id
+        ref
+        name
+        name_full
+      }
+      row 
+      content 
+      price 
+      quantity 
+      amount 
+      discount_percent 
+      discount_percent_automatic 
+      gos_code 
+      vin_code 
+      vat_rate 
+      vat_amount
+    }
+  }
+}

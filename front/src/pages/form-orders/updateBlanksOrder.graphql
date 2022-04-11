@@ -1,0 +1,5 @@
+mutation updateBlanksOrder($input: JSONObject) {
+  setBlanks(input: $input) {
+    _id
+  }
+}

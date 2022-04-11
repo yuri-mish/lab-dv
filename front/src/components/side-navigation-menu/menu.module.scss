@@ -1,0 +1,45 @@
+@use "sass:math";
+
+@import "../../scss/variables.scss";
+
+$icon-font-size: 18px !important;
+$icon-width: 18px;
+$icon-container-width: 60px;
+$dot-font-size: 10px;
+
+.treeview {
+  :global(.dx-treeview-item-content) { /* stylelint-disable-line */
+    padding: 0 0 !important;
+  }
+}
+
+.itemContainer {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: $icon-width;
+  font-size: $icon-font-size;
+}
+
+.iconContainer {
+  margin: 0 math.div($icon-container-width - $icon-width, 2);
+}
+
+.dot {
+  width: $icon-width;
+  height: $icon-width;
+  text-align: center;
+
+  &::after {
+    position: relative;
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    font-size: $dot-font-size;
+    background: $color-font-white;
+    border-radius: 50%;
+    content: '';
+  }
+}

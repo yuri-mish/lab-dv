@@ -1,0 +1,3 @@
+query ($ref: String) {
+  car(ref: $ref)
+}

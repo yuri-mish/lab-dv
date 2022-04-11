@@ -1,0 +1,75 @@
+@import "../../scss/variables.scss";
+$color-youtube-red: #f00;
+$color-dark: #212121;
+
+%fill {
+  fill: $color-youtube-red;
+  fill-opacity: 1;
+}
+
+.video {
+  position: relative;
+  background-color: $color-black;
+  cursor: pointer;
+
+  button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 68px;
+    height: 48px;
+    padding: 0;
+    background-color: $color-transparent;
+    border: none;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+
+    svg {
+      .shape {
+        fill: $color-dark;
+        fill-opacity: 0.8;
+      }
+
+      .icon {
+        fill: $color-white;
+      }
+    }
+
+    &:focus {
+      outline: none;
+
+      .shape {
+        @extend %fill;
+      }
+    }
+  }
+
+  picture {
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover {
+    /* stylelint-disable-next-line no-descending-specificity */
+    .shape {
+      @extend %fill;
+    }
+  }
+}

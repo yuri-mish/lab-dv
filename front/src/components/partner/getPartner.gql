@@ -1,0 +1,18 @@
+query getPartner($ref: String) {
+  partners(ref: $ref) {
+    ref
+    name 
+    edrpou 
+    id 
+    parent 
+    is_buyer 
+    is_supplier
+    legal_address 
+    note 
+    name_full 
+    individual_legal 
+    inn 
+    isCorporate
+    phones
+  }
+}

@@ -1,0 +1,12 @@
+query ($ref: String,  $sort: sort, $jfilt: [JSON]) {
+  getEPOTK (ref: $ref, sort: $sort, jfilt: $jfilt) {
+    _id 
+    ref 
+    caption 
+    number_doc 
+    date
+    order_type 
+    body
+    partner {ref name}
+  }
+}

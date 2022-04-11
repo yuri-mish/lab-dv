@@ -1,0 +1,3 @@
+query getLab($lab: String) {
+  getLab(jfilt: {fld: "ref", expr: "=", val: $lab}) 
+}

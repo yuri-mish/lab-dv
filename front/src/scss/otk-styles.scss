@@ -1,0 +1,230 @@
+@import "../themes/generated/variables.base.scss";
+@import './variables.scss';
+
+$button-font-weight: 400;
+$button-font-size: 17px;
+$accordion-font-weight: 300;
+$accordion-font-size: 18px;
+
+body {
+  overflow: hidden;
+}
+
+:root {
+  --toastify-color-info: #{$color-status-processing};
+  --toastify-color-error: #{$color-status-error};
+  --toastify-color-success: #{$color-status-success};
+}
+
+.dx-toolbar .dx-toolbar-items-container {
+  height: 40px;
+}
+
+.dx-datagrid-rowsview .dx-row-focused.dx-data-row .dx-command-edit .dx-link,
+.dx-datagrid-rowsview .dx-row-focused.dx-data-row > td:not(.dx-focused),
+.dx-datagrid-rowsview .dx-row-focused.dx-data-row > tr > td:not(.dx-focused) {
+  color: $base-text-color;
+  background-color: $color-selected-row;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > tr > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover > td,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover > tr > td {
+  color: $base-text-color;
+  background-color: $color-selected-row;
+}
+
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > td.dx-datagrid-group-space,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused) > tr > td.dx-datagrid-group-space,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover > td.dx-datagrid-group-space,
+.dx-datagrid-rowsview .dx-selection.dx-row:not(.dx-row-focused):hover > tr > td.dx-datagrid-group-space {
+  border-right-color: $color-selected-row;
+}
+
+.otk-normal-button {
+  height: 30px;
+
+  .dx-button-text {
+    font-weight: $button-font-weight;
+    text-transform: none;
+  }
+
+  .dx-icon {
+    margin-right: 12px !important;
+    font-size: $button-font-size !important;
+  }
+
+  .dx-button-content {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+  }
+}
+
+.dx-toast-message {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  white-space: pre;
+}
+
+.dx-field-item-required-mark {
+  color: $color-status-error !important;
+}
+
+.dx-accordion-item {
+  border-top: 1px solid $color-border-base;
+  border-bottom: none;
+  box-shadow: none;
+
+  &.dx-item-selected {
+    border-color: $color-border-base;
+  }
+
+  .dx-accordion-item-title {
+    padding: 5px 11px;
+  }
+
+  &-opened {
+    margin: 0;
+    border-color: $color-border-base;
+    border-bottom: 1px solid $color-border-base;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .dx-accordion-item-title {
+      border-color: $color-primary;
+      border-bottom: 2px solid;
+    }
+  }
+
+  &-body {
+    padding: 0;
+  }
+}
+
+.dx-item.dx-list-item {
+  border-top: 1px solid $color-border-base;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.otk-accordion-title {
+  margin: 0;
+  font-weight: $accordion-font-weight;
+  font-size: $accordion-font-size;
+}
+
+.otk-cell-no-padding {
+  height: 0 !important;
+  padding: 0 !important;
+}
+
+.otk-datagrid-fullpage {
+  height: calc(100vh - 120px);
+}
+
+.otk-tag {
+  display: flex;
+  align-items: center;
+  height: 21px;
+  margin: 0 3px;
+  padding-right: 4px;
+  padding-left: 4px;
+  color: $color-font-white;
+  white-space: nowrap;
+  border-radius: 4px;
+
+  &:empty {
+    display: none;
+  }
+}
+
+@each $status-name, $status-color in $status-colors {
+  .otk-#{$status-name} {
+    color: $status-color;
+  }
+}
+
+@each $status-name, $status-color in $status-colors {
+  .otk-row-status-#{$status-name} {
+    box-shadow: inset 4px 0 0 0 $status-color;
+  }
+}
+
+.otk-status {
+  color: $base-text-color;
+  background: transparent;
+}
+
+@each $status-name, $status-color in $status-colors {
+  .otk-status-#{$status-name} {
+    @if index($light-color-statuses, $status-name) {
+      color: $color-font-white !important;
+    }
+
+    @else {
+      color: $base-text-color !important;
+    }
+
+    background-color: $status-color;
+  }
+}
+
+@for $size from 8 through 30 {
+  .otk-font-#{$size} {
+    font-size: $size + px;
+  }
+}
+
+.otk-info-bar {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding-right: 15px;
+  padding-left: 15px;
+  font-size: $font-size-normal;
+  border-bottom: 1px solid $base-border-color;
+}
+
+.otk-doc-container {
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.otk-page-container {
+  width: 100%;
+  padding: 20px 20px;
+}
+
+.otk-doc-form {
+  position: relative;
+  width: 100%;
+  max-width: $form-max-width;
+
+  &-large {
+    max-width: $from-large-max-width;
+  }
+}
+
+.otk-dg-toolbar-border {
+  margin-top: 20px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-left: 1px solid;
+}
+
+.otk-content-block {
+  margin: 15px 15px !important;
+  padding-bottom: 20px !important;
+}
+
+.otk-notification-main-msg {
+  color: $color-font-base;
+  font-size: $font-size-normal;
+}

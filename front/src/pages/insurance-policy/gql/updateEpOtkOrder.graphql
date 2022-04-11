@@ -1,0 +1,5 @@
+mutation ($input: JSONObject) {
+  setEPOTK(input: $input) {
+    _id
+  }
+}

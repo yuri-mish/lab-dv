@@ -1,0 +1,18 @@
+.listItem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10px;
+
+  div {
+    &:first-child {
+      padding-right: 20%;
+    }
+
+    &:last-child {
+      position: absolute;
+      right: 0;
+    }
+  }
+}

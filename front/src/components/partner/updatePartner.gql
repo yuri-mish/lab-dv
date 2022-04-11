@@ -1,0 +1,5 @@
+mutation updatePartner($input: JSONObject) {
+  setPartner(input: $input) {
+    _id
+  }
+}

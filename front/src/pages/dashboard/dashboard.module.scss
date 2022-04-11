@@ -1,0 +1,29 @@
+@import 'src/scss/variables.scss';
+
+.container {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  width: 100%;
+  padding: 15px;
+  background-color: $color-white;
+}
+
+.hot_message {
+  color: $color-status-error;
+  font-size: $font-size-normal;
+}

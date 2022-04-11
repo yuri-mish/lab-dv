@@ -1,0 +1,104 @@
+@import '../../scss/variables.scss';
+
+$step-font-weight: 400;
+$step-font-size: 12px;
+$step-active-font-weight: 450;
+
+.popup {
+  :global(.dx-popup-content) {
+    padding: 2px 0 0;
+  }
+}
+
+.content {
+  padding: 18px 16px 16px;
+}
+
+.buttons {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.createFormActionButton {
+  :global(.dx-button) {
+    :global(.dx-button-text) {
+      text-transform: none;
+    }
+  }
+}
+
+.createFormContainer {
+  padding: 15px 0;
+}
+
+.step {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 15px 7px 7px;
+  border: 1px solid;
+  border-color: $color-border-base;
+  border-radius: 3px;
+
+  & > label {
+    position: absolute;
+    top: -8px;
+    left: 22px;
+    z-index: 1;
+    padding: 0 5px;
+    color: $color-border-base;
+    font-weight: $step-font-weight;
+    font-size: $step-font-size;
+    text-transform: uppercase;
+    background-color: $color-white;
+  }
+
+  &.active {
+    padding: 14px 6px 6px;
+    border-color: $color-primary;
+    border-width: 2px;
+
+    & > label {
+      display: initial;
+      color: $color-primary;
+      font-weight: $step-active-font-weight;
+    }
+  }
+}
+
+.editForm {
+  margin-bottom: 20px;
+  padding: 4px 8px 8px;
+
+  & > label {
+    display: none;
+  }
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  width: 340px;
+  padding-bottom: 8px;
+}
+
+.formContainer {
+  width: 100%;
+}
+
+.mainForm {
+  display: flex;
+  justify-content: space-between;
+}
+
+.readOnlyField {
+  margin-left: 20px;
+  padding-bottom: 10px;
+  color: $color-font-base;
+}
+
+.readOnlyFieldsContainer {
+  display: flex;
+  justify-content: flex-end;
+}

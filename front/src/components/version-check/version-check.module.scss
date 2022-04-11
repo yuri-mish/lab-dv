@@ -1,0 +1,15 @@
+@import "../../scss/variables.scss";
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
+.button {
+  margin: 0 10px;
+  animation: fadeIn 5s infinite alternate;
+}
+
+.mainMsg {
+  color: $color-font-base;
+  font-size: $font-size-normal;
+}

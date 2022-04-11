@@ -1,0 +1,64 @@
+@import '../../../scss/variables.scss';
+
+$base-green: #32a050;
+$base-red: #8c2828;
+$base-gray: #333;
+$white: #fff;
+$white-50: #ddd;
+$bgMain: rgb(148 148 148);
+$font-size: 30px;
+
+.ep_data_grid {
+  height: calc(100vh - 140px);
+}
+
+.padding_0_10 {
+  padding: 0 10px;
+}
+// ================================
+.policy_card_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px;
+
+  & > * {
+    width: 50%;
+    padding-right: 20px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 25px;
+
+    & > * {
+      width: 100%;
+    }
+  }
+}
+
+.text_item_wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 25px;
+  font-size: $font-size-normal;
+  line-height: 1.5;
+
+  span {
+    margin-right: 5px;
+  }
+}
+
+.padding_15 {
+  padding: 15px;
+}
+
+.container {
+  position: relative;
+  z-index: 10;
+  min-height: calc(100vh - 114px);
+  padding: 15px;
+  font-size: $font-size-normal;
+}

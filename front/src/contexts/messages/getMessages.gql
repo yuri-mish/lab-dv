@@ -1,0 +1,5 @@
+query getMessages {
+  messages {
+    mes_array
+  }
+}

@@ -1,0 +1,9 @@
+node_modules
+.env
+front/.env
+srv/.env
+reports
+front/environments/.env.develop
+front/environments/.env.test
+report.html
+srv/priv/otk-lab-google-key.json

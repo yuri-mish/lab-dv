@@ -1,0 +1,17 @@
+.listItem {
+  display: flex;
+
+  div {
+    &:first-child {
+      width: 30px;
+      padding-right: 20%;
+      padding-left: 5%;
+    }
+
+    &:last-child {
+      margin-left: auto;
+      padding-right: 10%;
+      text-align: right;
+    }
+  }
+}

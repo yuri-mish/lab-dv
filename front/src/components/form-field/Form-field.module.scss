@@ -1,0 +1,17 @@
+.mr_bottom {
+  margin-bottom: 20px;
+}
+
+.df_grow {
+  flex-grow: 1;
+  text-align: right;
+
+  @media screen and (max-width: 950px) {
+    flex-grow: unset;
+  }
+}
+
+.wrap_text {
+  white-space: normal;
+  text-align: right;
+}

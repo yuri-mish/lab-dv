@@ -1,0 +1,95 @@
+<mjml>
+  <mj-head>
+    <mj-preview>${preview}</mj-preview>
+    <mj-attributes>
+      <mj-all font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-all>
+      <mj-text font-weight="400" font-size="16px" color="#000000" line-height="24px" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"></mj-text>
+    </mj-attributes>
+    <mj-style inline="inline">
+      .body-section {
+        border: 1px solid lightgrey;
+      }
+    </mj-style>
+  </mj-head>
+  <mj-body background-color='#ffffff'>
+    <mj-wrapper padding-top='0' padding-bottom='0' css-class='body-section'>
+      <mj-section background-color='#ffffff'>
+        <mj-column>
+          <mj-image
+            src='cid:otklogo'
+            width='60px'
+            align='left'
+          >
+          </mj-image>
+        </mj-column>
+      </mj-section>
+      <mj-section background-size='cover' padding-top='0px' padding-bottom='0px'>
+        <mj-column 
+          width='100%'       
+          padding-top='0px'
+        >
+          <mj-text 
+            font-size='20px' 
+            padding-top='20px' 
+            padding-bottom='15px'
+            align='center'
+          >
+            Інформація про замовлення
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+         <mj-text>
+            Номер замовлення: ${short_order_number} 
+          </mj-text>
+          <mj-text>
+            Дата і час замовлення: ${order_date} 
+          </mj-text>
+          <mj-text>
+            Контактний телефон: ${formated_phone_number}
+          </mj-text>
+          <mj-text>
+            Iм'я замовника: ${person_name} 
+          </mj-text>
+          <mj-text>
+            ЕДРПОУ: ${inn} 
+          </mj-text>
+          <mj-text>
+            Держ. номер авто: ${vehicle_no}
+          </mj-text>
+          <mj-text>
+            Замовляються послуги: ${services}
+          </mj-text>
+          <mj-text>
+            Лабораторія: ${lab_info}
+          </mj-text>
+          <mj-text>
+            Бажана дата отримання сервісу: ${date}
+          </mj-text>
+          <mj-text>
+            Сума замовлення: ${order_amount} грн
+          </mj-text>
+          <mj-text>
+            ${email_info}
+          </mj-text>
+          <mj-text>
+            ${payment_info}
+          </mj-text>
+          <mj-button href='${short_info_link}'>
+            Деталі та маршрут
+          </mj-button>
+        </mj-column>
+      </mj-section>
+      <mj-section>
+        <mj-column>
+          <mj-divider border-width='1px' border-color='lightgrey'/>
+          <mj-text color='grey' font-size='12px' align='center'>
+            При виникненні питань звертатися за номером телефону: ${callcenter_phone}
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mg-wrapper>
+
+  </mj-body>
+</mjml> 
